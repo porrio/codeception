@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  php:
+    container_name: codeception_phpfpm
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - .:/data/www:delegated
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+
+  firefox:
+    image: selenium/standalone-firefox
+    ports:
+      - 4444:4444

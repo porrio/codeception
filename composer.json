@@ -1,0 +1,6 @@
+{
+    "require": {
+        "codeception/codeception": "^5.0",
+        "codeception/module-webdriver": "*"
+    }
+}
